@@ -93,48 +93,44 @@ h3{
 /* 🔥 AJUSTE SÓ PARA CELULAR */
 @media (max-width: 768px) {
 
+    /* FORÇA tudo parar de usar right */
+    .box, .senha, .entrar, .validar {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+    }
+
     .titulo{
-        margin-top: 25%;
+        margin-top: 20% !important;
     }
 
     .box{
         width: 90% !important;
         height: auto !important;
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%);
-        margin-top: 20% !important;
+        margin-top: 30% !important;
     }
 
     .senha{
         width: 80% !important;
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%);
-        margin-top: 40% !important;
-        height: 5%;
+        margin-top: 55% !important;
+        height: 40px;
     }
 
     .entrar{
         width: 60% !important;
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%);
-        margin-top: 55% !important;
-        height: 5%;
+        margin-top: 70% !important;
+        height: 40px;
     }
 
     .validar{
-        width: 50% !important;
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%);
-        margin-top: 65% !important;
-        height: 5%;
+        width: 60% !important;
+        margin-top: 80% !important;
+        height: 40px;
     }
 
     #grid {
         grid-template-columns: repeat(3, 80px);
+        margin-top: 10%;
     }
 
     .bloco {
