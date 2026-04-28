@@ -93,9 +93,9 @@ h3{
 /* 🔥 AJUSTE SÓ PARA CELULAR */
 @media (max-width: 768px) {
 body {
-    background-image: url("../img/Fundocel.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("../img/Fundocel.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
     /* FORÇA tudo parar de usar right */
     .box, .senha, .entrar, .validar {
