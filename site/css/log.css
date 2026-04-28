@@ -95,9 +95,6 @@ h3{
 }
 
 @media (max-width: 768px) {
-body {
-    background-size: 570% !important; /* 👈 zoom */
-}
     .box{
-        margin-top:25%;
+        margin-top:25% !important;
     }
