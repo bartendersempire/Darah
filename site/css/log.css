@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.titulo{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+    margin-top:15%;
+    color: rgb(0, 204, 255);
+    text-shadow: -2px 2px 1px black, 2px -2px 1px black;
+}
+.box{ 
+    font-family: 'Times New Roman', Times, serif;
+    position: fixed;
+    text-align: center;
+    right: 33.6%;
+    font-size: 20px;
+    margin-top:5%;
+    border: 1px solid rgb(163, 246, 255) ;
+    width: 33%;
+    height: 25%;
+    box-shadow: -10px 13px 25px rgb(147, 217, 255);
+    border-radius: 2%;
+}
+.box{ background-color: rgba(192, 235, 255, 0.666); /* cor de fundo */}
+body {
+
+        background-image: url("../img/fundo.png");
+    background-size: cover;        /* cobre toda a tela */
+  
+    background-repeat: no-repeat;  /* não repete */
+      background-position: top 555%;
+}
+.senha{
+    font-size: 16px;
+    position: fixed;
+    font-family: 'Times New Roman', Times, serif;
+    width: 27%; 
+    height: 4%;
+    right: 35.41%;
+    margin-top:10%;
+    border-radius: 3%;
+    background-color: rgba(218, 243, 252, 0.838);
+
+}
+::placeholder{
+    text-align: center;
+}
+.validar{
+     text-align: center;
+    font-size: 18px;
+    position: fixed;
+    font-family: 'Times New Roman', Times, serif;
+    width: 15%; 
+    height: 4%;
+      right: 42.8%;
+      border-radius: 3%;
+}
+.entrar{
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    font-family: 'Times New Roman', Times, serif;
+    width: 25%; 
+    height: 4%;
+    right: 36.65%;
+    margin-top:14%;
+    border-radius: 3%;
+    background-color: rgba(218, 243, 252, 0.838);
+}
+
+.selecionado {
+    border: 16px solid red;
+    box-shadow: -2px 2px 1px red;
+}
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+}
+.captcha{
+    margin-top:15%;
+    text-align: center;
+}
+.bloco {
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/18.jpg");
+    background-size: 300px 300px;
+    cursor: pointer;
+    border: 2px solid #000000;
+}
+h3{
+    color:lightblue;
+     text-shadow: -2px 2px 1px black, 2px -2px 1px black;
+}

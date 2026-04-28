@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+       <link rel="stylesheet" href="../css/log.css">
+       
+    </head>
+    <body>
+        <h1 class="titulo" id="login2"> 
+            Faça login com sua senha e o captcha para entrar neste site
+        </h1>
+        <div id="login">
+            <form onsubmit="verificarSenha(event)">
+            <p class="box">
+            Entre com a senha
+            </p>
+            <input id="senha" class="senha"type="text" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="Digite a senha... (dica a aniversario de namoro sem barras)">
+            <button type="submit" class="entrar">
+                <b>
+                    Entrar
+                </b>
+            </button>   
+            </form>
+     </div>
+     <div id="captcha" style="display:none; ">
+        <h3 class="captcha">Monte o captcha para provar que não é um robô</h3>
+        <div id="grid"></div>
+        <br>
+
+        <button onclick="verificarCaptcha()" class="validar"><b>Validar</b></button>
+
+</div>
+<script src="../js/logjs.js"></script>
+        </body>
+        
+</html>
