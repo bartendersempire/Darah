@@ -20,14 +20,12 @@
     box-shadow: -10px 13px 25px rgb(147, 217, 255);
     border-radius: 2%;
 }
-.box{ background-color: rgba(192, 235, 255, 0.666); /* cor de fundo */}
+.box{ background-color: rgba(192, 235, 255, 0.666); }
 body {
-
-        background-image: url("../img/fundo.png");
-    background-size: cover;        /* cobre toda a tela */
-  
-    background-repeat: no-repeat;  /* não repete */
-      background-position: top 555%;
+    background-image: url("../img/fundo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 555%;
 }
 .senha{
     font-size: 16px;
@@ -39,20 +37,19 @@ body {
     margin-top:10%;
     border-radius: 3%;
     background-color: rgba(218, 243, 252, 0.838);
-
 }
 ::placeholder{
     text-align: center;
 }
 .validar{
-     text-align: center;
+    text-align: center;
     font-size: 18px;
     position: fixed;
     font-family: 'Times New Roman', Times, serif;
     width: 15%; 
     height: 4%;
-      right: 42.8%;
-      border-radius: 3%;
+    right: 42.8%;
+    border-radius: 3%;
 }
 .entrar{
     text-align: center;
@@ -66,7 +63,6 @@ body {
     border-radius: 3%;
     background-color: rgba(218, 243, 252, 0.838);
 }
-
 .selecionado {
     border: 16px solid red;
     box-shadow: -2px 2px 1px red;
@@ -91,10 +87,51 @@ body {
 }
 h3{
     color:lightblue;
-     text-shadow: -2px 2px 1px black, 2px -2px 1px black;
+    text-shadow: -2px 2px 1px black, 2px -2px 1px black;
 }
 
+/* 🔥 AJUSTE SÓ PARA CELULAR */
 @media (max-width: 768px) {
-    .box{
-        margin-top:25% !important;
+
+    .titulo{
+        margin-top: 25%;
     }
+
+    .box{
+        width: 90% !important;
+        height: auto !important;
+        right: 5% !important;
+        margin-top: 20% !important;
+    }
+
+    .senha{
+        width: 80% !important;
+        right: 10% !important;
+        margin-top: 35% !important;
+        height: 5%;
+    }
+
+    .entrar{
+        width: 60% !important;
+        right: 20% !important;
+        margin-top: 50% !important;
+        height: 5%;
+    }
+
+    .validar{
+        width: 50% !important;
+        right: 25% !important;
+        margin-top: 60% !important;
+        height: 5%;
+    }
+
+    #grid {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .bloco {
+        width: 80px;
+        height: 80px;
+        background-size: 240px 240px;
+    }
+}
