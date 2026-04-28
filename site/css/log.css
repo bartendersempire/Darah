@@ -11,7 +11,7 @@
     font-family: 'Times New Roman', Times, serif;
     position: fixed;
     text-align: center;
-    right: 33.6%;
+
     font-size: 20px;
     margin-top:5%;
     border: 1px solid rgb(163, 246, 255) ;
@@ -107,7 +107,9 @@ body {
         width: 90% !important;
         height: 95% !important;
         margin-top: 30% !important;
-    }
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+        }
 
     .senha{
         width: 80% !important;
