@@ -98,12 +98,7 @@ body {
     background-repeat: no-repeat !important;
 }
     /* FORÇA tudo parar de usar right */
-    .box, .senha, .entrar, .validar {
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%) !important;
-    }
-
+    
     .titulo{
         margin-top: 20% !important;
     }
