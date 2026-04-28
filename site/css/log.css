@@ -98,3 +98,6 @@ h3{
 body {
     background-size: 570% !important; /* 👈 zoom */
 }
+    .box{
+        margin-top:25%;
+    }
