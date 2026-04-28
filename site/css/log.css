@@ -29,11 +29,10 @@ body {
 }
 .senha{
     font-size: 16px;
-    position: fixed;
+    position: relative;
     font-family: 'Times New Roman', Times, serif;
     width: 27%; 
     height: 4%;
-    right: 35.41%;
     margin-top:10%;
     border-radius: 3%;
     background-color: rgba(218, 243, 252, 0.838);
@@ -54,11 +53,10 @@ body {
 .entrar{
     text-align: center;
     font-size: 18px;
-    position: fixed;
+    position: relative ;
     font-family: 'Times New Roman', Times, serif;
     width: 25%; 
     height: 4%;
-    right: 36.65%;
     margin-top:14%;
     border-radius: 3%;
     background-color: rgba(218, 243, 252, 0.838);
@@ -112,12 +110,16 @@ body {
         }
 
     .senha{
+    left: 50% !important;
+    transform: translateX(-50%) !important;
         width: 80% !important;
         margin-top: 55% !important;
         height: 40px;
     }
 
     .entrar{
+    left: 50% !important;
+    transform: translateX(-50%) !important;
         width: 60% !important;
         margin-top: 70% !important;
         height: 40px;
