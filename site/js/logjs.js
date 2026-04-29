@@ -31,23 +31,25 @@ function renderizar() {
     let grid = document.getElementById("grid");
     grid.innerHTML = "";
 
+    // 👇 tamanho dinâmico
+    let tamanho = window.innerWidth <= 768 ? 80 : 100;
+
     ordem.forEach((pos, index) => {
         let div = document.createElement("div");
         div.className = "bloco";
 
-        // 👉 Se for o selecionado, adiciona a classe
         if (index === selecionado) {
             div.classList.add("selecionado");
         }
 
-        let x = (pos % 3) * 100;
-        let y = Math.floor(pos / 3) * 100;
+        let x = (pos % 3) * tamanho;
+        let y = Math.floor(pos / 3) * tamanho;
 
         div.style.backgroundPosition = `-${x}px -${y}px`;
 
-        div.onclick = () => selecionar(index);
-
         grid.appendChild(div);
+
+        div.onclick = () => selecionar(index);
     });
 }
 
