@@ -1,46 +1,44 @@
+// ===== LOGIN =====
 function verificarSenha(event){
-    event.preventDefault(); 
+    event.preventDefault();
 
-    let senhaDigitada = document.getElementById("senha").value;
-    let senhaCorreta = "15032025";
+    let senha = document.getElementById("senha").value;
 
-    if(senhaDigitada == senhaCorreta){
-        document.getElementById("captcha").style.display = "block";
-        document.getElementById("login").style.display = "none";
-        document.querySelector(".titulo").style.display = "none";
-
-        ordem = [0,1,2,3,4,5,6,7,8];
-        selecionado = null;
-
-        embaralhar();
-        renderizar();
-    }
-    else{
-        alert("Senha incorreta");
+    if(senha === "15032025"){
+        window.location.href = "captcha.html";
+    } else {
+        alert("Senha incorreta!");
     }
 }
 
+
+// ===== CAPTCHA =====
 let ordem = [0,1,2,3,4,5,6,7,8];
 let selecionado = null;
 
-function embaralhar() {
-    for (let i = ordem.length - 1; i > 0; i--) {
+if(document.getElementById("grid")){
+    embaralhar();
+    renderizar();
+}
+
+function embaralhar(){
+    for(let i = ordem.length - 1; i > 0; i--){
         let j = Math.floor(Math.random() * (i + 1));
         [ordem[i], ordem[j]] = [ordem[j], ordem[i]];
     }
 }
 
-function renderizar() {
+function renderizar(){
     let grid = document.getElementById("grid");
     grid.innerHTML = "";
 
     let tamanho = window.innerWidth <= 768 ? 80 : 100;
 
-    ordem.forEach((pos, index) => {
+    ordem.forEach((pos, index)=>{
         let div = document.createElement("div");
         div.className = "bloco";
 
-        if (index === selecionado) {
+        if(index === selecionado){
             div.classList.add("selecionado");
         }
 
@@ -49,27 +47,27 @@ function renderizar() {
 
         div.style.backgroundPosition = `-${x}px -${y}px`;
 
-        div.onclick = () => selecionar(index);
+        div.onclick = ()=> selecionar(index);
 
         grid.appendChild(div);
     });
 }
 
-function selecionar(index) {
-    if (selecionado === null) {
+function selecionar(index){
+    if(selecionado === null){
         selecionado = index;
     } else {
         [ordem[selecionado], ordem[index]] = [ordem[index], ordem[selecionado]];
         selecionado = null;
+        renderizar();
     }
-
-    renderizar();
 }
 
-function verificarCaptcha() {
+function verificarCaptcha(){
     let correto = JSON.stringify(ordem) === JSON.stringify([0,1,2,3,4,5,6,7,8]);
 
-    if (correto) {
+    if(correto){
+        alert("Acesso liberado!");
         window.location.href = "inicio.html";
     } else {
         alert("Ainda está errado!");
