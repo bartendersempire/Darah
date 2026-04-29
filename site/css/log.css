@@ -9,10 +9,10 @@
 }
 .box{
     position: fixed;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    font-size: 20px;
     width: 33%;
     height: 25%;
     
@@ -28,11 +28,11 @@ body {
     background-position: top 555%;
 }
 .senha{
-    font-size: 16px;
+    font-size: 14px;
     position: relative;
     font-family: 'Times New Roman', Times, serif;
-    width: 27%; 
-    height: 4%;
+    width: 70%; 
+    height: 10%;
     margin-top:10%;
     border-radius: 3%;
     background-color: rgba(218, 243, 252, 0.838);
@@ -52,7 +52,7 @@ body {
 }
 .entrar{
     width: 60%;
-    height: 40px;
+    height: 35px;
     margin-top: 20px;
     text-align: center;
     font-size: 18px;
@@ -60,7 +60,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     border-radius: 3%;
     background-color: rgba(218, 243, 252, 0.838);
-    left:13%;
+    left:-2%;
 }
 .selecionado {
     border: 16px solid red;
