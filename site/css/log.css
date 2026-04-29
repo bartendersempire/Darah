@@ -80,9 +80,11 @@ body {
     width: 100px;
     height: 100px;
     background-image: url("../img/18.jpg");
-    background-size: 300px 300px;
+    background-size: cover;
+    background-position: center;
     cursor: pointer;
     border: 2px solid #000000;
+        background-repeat: no-repeat;
 }
 h3{
     color:lightblue;
@@ -136,9 +138,10 @@ body {
         margin-top: 10%;
     }
 
-    .bloco {
-        width: 80px;
-        height: 80px;
-        background-size: 240px 240px;
-    }
+   .bloco {
+    width: 80px;
+    height: 80px;
+    background-size: 240px 240px; /* 3 x 80 */
+  background-repeat: no-repeat;
+}
 }
