@@ -114,6 +114,7 @@ body {
     }
 
     .entrar{
+        top:30%;
         width: 60% !important;
         height: 40px;
     }
