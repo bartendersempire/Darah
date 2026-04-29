@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/log.css">
-    <title>Login</title>
-</head>
+    <head>
+       <link rel="stylesheet" href="../css/log.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 class="titulo" id="login2"> 
+            Faça login com sua senha e o captcha para entrar neste site
+        </h1>
+        <div id="login">
+            <form onsubmit="verificarSenha(event)">
+            <p class="box">
+            Entre com a senha
+            <input id="senha" class="senha"type="text" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="Digite a senha... (dica a aniversario de namoro sem barras)">
+            <button type="submit" class="entrar">
+                <b>
+                    Entrar
+                </b>
+            </button>  
+            </p> 
+            
+             
+            </form>
+     </div>
+     <div id="captcha" style="display:none; ">
+        <h3 class="captcha">Monte o captcha para provar que não é um robô</h3>
+        <div id="grid"></div>
+        <br>
 
-<body>
+        <button onclick="verificarCaptcha()" class="validar"><b>Validar</b></button>
 
-<h1 class="titulo">Faça login</h1>
-
-<div class="box">
-    <form onsubmit="verificarSenha(event)">
-        <p>Digite a senha</p>
-
-        <input id="senha" class="senha" type="text"
-            inputmode="numeric"
-            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-            placeholder="Digite a senha">
-
-        <button type="submit" class="entrar">Entrar</button>
-    </form>
 </div>
-
-<script src="../js/log.js"></script>
-
-</body>
+<script src="../js/logjs.js"></script>
+        </body>
+        
 </html>
