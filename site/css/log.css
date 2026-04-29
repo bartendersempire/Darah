@@ -63,8 +63,8 @@ body {
     left:-2%;
 }
 .selecionado {
-    border: 5px solid red;
-    box-shadow: -2px 2px 1px red;
+    outline: 3px solid red;
+    outline-offset: -3px;
 }
 
 .captcha{
