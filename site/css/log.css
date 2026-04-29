@@ -132,17 +132,14 @@ body {
         height: 40px;
     }
 
+
     #grid {
         grid-template-columns: repeat(3, 80px);
-        margin-top: 10%;
     }
 
-   .bloco {
-    width: 80px;
-    height: 80px;
-    background-size: 240px 240px; /* 3 x 80 */
-  background-repeat: no-repeat;
-        background-size: cover;
-    background-position: center;
-}
+    .bloco {
+        width: 80px;
+        height: 80px;
+        background-size: 240px 240px; /* 3x80 */
+    }
 }
