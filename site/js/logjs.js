@@ -1,3 +1,25 @@
+function verificarSenha(event){
+    event.preventDefault(); 
+
+    let senhaDigitada = document.getElementById("senha").value;
+    let senhaCorreta = "15032025";
+
+    if(senhaDigitada == senhaCorreta){
+        document.getElementById("captcha").style.display = "block";
+        document.getElementById("login").style.display = "none";
+        document.querySelector(".titulo").style.display = "none";
+
+        ordem = [0,1,2,3,4,5,6,7,8];
+        selecionado = null;
+
+        embaralhar();
+        renderizar();
+    }
+    else{
+        alert("Senha incorreta");
+    }
+}
+
 let ordem = [0,1,2,3,4,5,6,7,8];
 let selecionado = null;
 
