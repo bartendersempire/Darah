@@ -95,17 +95,7 @@ body {
     cursor: pointer;
     border: 2px solid black;
 }
-.bloco:nth-child(1) { background-position: 0px 0px; }
-.bloco:nth-child(2) { background-position: -100px 0px; }
-.bloco:nth-child(3) { background-position: -200px 0px; }
 
-.bloco:nth-child(4) { background-position: 0px -100px; }
-.bloco:nth-child(5) { background-position: -100px -100px; }
-.bloco:nth-child(6) { background-position: -200px -100px; }
-
-.bloco:nth-child(7) { background-position: 0px -200px; }
-.bloco:nth-child(8) { background-position: -100px -200px; }
-.bloco:nth-child(9) { background-position: -200px -200px; }
 h3{
     color: lightblue;
     text-shadow: -2px 2px 1px black, 2px -2px 1px black;
