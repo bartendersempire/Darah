@@ -33,7 +33,6 @@ body {
     font-family: 'Times New Roman', Times, serif;
     width: 70%; 
     height: 10%;
-    margin-top:10%;
     border-radius: 3%;
     background-color: rgba(218, 243, 252, 0.838);
 }
@@ -53,14 +52,12 @@ body {
 .entrar{
     width: 60%;
     height: 35px;
-    margin-top: 20px;
     text-align: center;
     font-size: 18px;
     position: relative ;
     font-family: 'Times New Roman', Times, serif;
     border-radius: 3%;
     background-color: rgba(218, 243, 252, 0.838);
-    left:-2%;
 }
 .selecionado {
     border: -15px solid red;
@@ -113,17 +110,13 @@ body {
         }
     
 .senha{
-    left: 43% !important;
     transform: translateX(-50%) !important;
         width: 80% !important;
-        margin-top: 5% !important;
         height: 20px;
     }
 
     .entrar{
-    left: 3% ;
         width: 60% !important;
-        top: 5%;
         height: 40px;
     }
 
