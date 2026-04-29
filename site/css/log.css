@@ -1,139 +1,139 @@
 @charset "UTF-8";
+
 .titulo{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 26px;
-    margin-top:15%;
+    margin-top: 15%;
     color: rgb(0, 204, 255);
     text-shadow: -2px 2px 1px black, 2px -2px 1px black;
 }
+
 .box{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
     font-size: 20px;
     width: 33%;
-    height: 25%;
+    height: auto; /* 🔥 corrigido */
     
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    background-color: rgba(192, 235, 255, 0.666);
+    padding: 20px; /* 🔥 melhora layout */
+    border-radius: 10px;
 }
-.box{ background-color: rgba(192, 235, 255, 0.666); }
+
 body {
-    background-image: url("../img/fundo.png");
+    background-image: url("/img/fundo.png"); /* 🔥 corrigido */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top 555%;
 }
+
 .senha{
     font-size: 14px;
-    position: relative;
     font-family: 'Times New Roman', Times, serif;
-    width: 70%; 
-    height: 10%;
-    margin-top:10%;
-    border-radius: 3%;
+    width: 80%; 
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
     background-color: rgba(218, 243, 252, 0.838);
+    text-align: center;
 }
+
 ::placeholder{
     text-align: center;
 }
+
+.entrar{
+    width: 60%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: rgba(218, 243, 252, 0.838);
+    cursor: pointer;
+}
+
 .validar{
     text-align: center;
     font-size: 18px;
-    position: fixed;
     font-family: 'Times New Roman', Times, serif;
-    width: 15%; 
-    height: 4%;
-    right: 42.8%;
-    border-radius: 3%;
+    width: 200px; 
+    height: 40px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
 }
-.entrar{
-    width: 60%;
-    height: 35px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    position: relative ;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 3%;
-    background-color: rgba(218, 243, 252, 0.838);
-    left:-2%;
-}
+
 .selecionado {
-    border: 16px solid red;
+    border: 6px solid red;
     box-shadow: -2px 2px 1px red;
 }
+
 #grid {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     gap: 5px;
     justify-content: center;
 }
+
 .captcha{
-    margin-top:15%;
+    margin-top: 30px;
     text-align: center;
 }
+
 .bloco {
     width: 100px;
     height: 100px;
-    background-image: url("../img/18.jpg");
+    background-image: url("/img/18.jpg"); /* 🔥 corrigido */
     background-size: 300px 300px;
     cursor: pointer;
     border: 2px solid #000000;
 }
+
 h3{
-    color:lightblue;
+    color: lightblue;
     text-shadow: -2px 2px 1px black, 2px -2px 1px black;
 }
 
-/* 🔥 AJUSTE SÓ PARA CELULAR */
+/* 📱 MOBILE */
 @media (max-width: 768px) {
-body {
-    background-image: url("../img/Fundocel.png") !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-}
-    /* FORÇA tudo parar de usar right */
-    
+
+    body {
+        background-image: url("/img/Fundocel.png") !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     .titulo{
-        margin-top: 20% !important;
+        margin-top: 20%;
     }
 
     .box{
-        width: 90% !important;
-        height: 25% !important;
-        margin-top: 10% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-        }
+        width: 90%;
+        padding: 20px;
+    }
 
     .senha{
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-        width: 80% !important;
-        margin-top: 55% !important;
-        height: 40px;
+        width: 90%;
     }
 
     .entrar{
-    left: 50% ;
-        width: 60% !important;
-        top: 13%;
-        height: 40px;
+        width: 70%;
     }
 
     .validar{
-        width: 60% !important;
-        margin-top: 80% !important;
-        height: 40px;
+        width: 70%;
     }
 
     #grid {
         grid-template-columns: repeat(3, 80px);
-        margin-top: 10%;
+        margin-top: 20px;
     }
 
     .bloco {
