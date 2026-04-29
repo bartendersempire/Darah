@@ -3,20 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/log.css">
 
-<title>Captcha</title>
+<title>Login + Captcha Puzzle</title>
+
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* GRID DO PUZZLE */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bloco {
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/18.jpg"); /* 👈 COLOQUE SUA FOTO AQUI */
+    background-size: 300px 300px;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+</style>
 </head>
 
 <body>
 
-<h3 class="captcha">Monte a imagem corretamente</h3>
+<h2>Digite a senha</h2>
 
-<div id="grid"></div>
+<form onsubmit="verificarSenha(event)">
+    <input 
+        type="text" 
+        id="senha"
+        placeholder="Somente números"
+        inputmode="numeric"
+        maxlength="4"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    >
+    <br><br>
+    <button type="submit">Entrar</button>
+</form>
 
-<button onclick="verificarCaptcha()" class="validar">Validar</button>
+<!-- CAPTCHA -->
+<div id="captcha" style="display:none;">
+    <h3>Monte a imagem corretamente</h3>
+    <div id="grid"></div>
+    <br>
+    <button onclick="verificarCaptcha()">Validar</button>
+</div>
 
-<script src="../js/log.js"></script>
+<script>
+let ordem = [0,1,2,3,4,5,6,7,8];
+let selecionado = null;
+
+// SENHA
+function verificarSenha(event) {
+    event.preventDefault();
+
+    let senha = document.getElementById("senha").value;
+
+    if (senha === "1234") {
+        document.getElementById("captcha").style.display = "block";
+        embaralhar();
+        renderizar();
+    } else {
+        alert("Senha incorreta!");
+    }
+}
+
+// EMBARALHAR
+function embaralhar() {
+    ordem.sort(() => Math.random() - 0.5);
+}
+
+// RENDERIZAR IMAGEM
+function renderizar() {
+    let grid = document.getElementById("grid");
+    grid.innerHTML = "";
+
+    ordem.forEach((pos, index) => {
+        let div = document.createElement("div");
+        div.className = "bloco";
+
+        let x = (pos % 3) * 100;
+        let y = Math.floor(pos / 3) * 100;
+
+        div.style.backgroundPosition = `-${x}px -${y}px`;
+
+        div.onclick = () => selecionar(index);
+
+        grid.appendChild(div);
+    });
+}
+
+// TROCAR PEÇAS
+function selecionar(index) {
+    if (selecionado === null) {
+        selecionado = index;
+    } else {
+        [ordem[selecionado], ordem[index]] = [ordem[index], ordem[selecionado]];
+        selecionado = null;
+        renderizar();
+    }
+}
+
+// VALIDAR CAPTCHA
+function verificarCaptcha() {
+    let correto = JSON.stringify(ordem) === JSON.stringify([0,1,2,3,4,5,6,7,8]);
+
+    if (correto) {
+        alert("Acesso liberado!");
+        window.location.href = "inicio.html";
+    } else {
+        alert("Ainda está errado!");
+    }
+}
+</script>
 
 </body>
 </html>
