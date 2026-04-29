@@ -27,6 +27,7 @@ body {
     background-position: top 555%;
 }
 .senha{
+    position: relative;
     font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
     width: 70%; 
@@ -48,6 +49,7 @@ body {
     border-radius: 3%;
 }
 .entrar{
+    position: relative;
     width: 60%;
     height: 35px;
     text-align: center;
