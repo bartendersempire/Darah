@@ -4,43 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/log.css">
+    <title>Login</title>
 </head>
 
 <body>
 
-<h1 class="titulo">
-    Faça login com sua senha e o captcha para entrar neste site
-</h1>
+<h1 class="titulo">Faça login</h1>
 
-<div id="login">
+<div class="box">
     <form onsubmit="verificarSenha(event)">
+        <p>Digite a senha</p>
 
-        <div class="box">
-            <p>Entre com a senha</p>
+        <input id="senha" class="senha" type="text"
+            inputmode="numeric"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            placeholder="Digite a senha">
 
-            <input id="senha" class="senha" type="text"
-                inputmode="numeric"
-                pattern="[0-9]*"
-                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                placeholder="Digite a senha... (dica a aniversario de namoro sem barras)">
-
-            <button type="submit" class="entrar">
-                <b>Entrar</b>
-            </button>
-        </div>
-
+        <button type="submit" class="entrar">Entrar</button>
     </form>
 </div>
 
-<div id="captcha" style="display:none;">
-</div>
-
-    <button onclick="verificarCaptcha()" class="validar">
-        <b>Validar</b>
-    </button>
-</div>
-
-<script src="../js/logjs.js"></script>
+<script src="../js/log.js"></script>
 
 </body>
 </html>
