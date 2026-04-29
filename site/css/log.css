@@ -66,24 +66,24 @@ body {
     border: 16px solid red;
     box-shadow: -2px 2px 1px red;
 }
+
+.captcha{
+    margin-top:15%;
+    text-align: center;
+}
 #grid {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     gap: 5px;
     justify-content: center;
 }
-.captcha{
-    margin-top:15%;
-    text-align: center;
-}
+
 .bloco {
     width: 100px;
     height: 100px;
     background-image: url("../img/18.jpg");
-    background-size: 300px 300px;
-    cursor: pointer;
-    border: 2px solid #000000;
-        background-repeat: no-repeat;
+    background-size: 300px 300px; /* 3x100 */
+    background-repeat: no-repeat;
 }
 h3{
     color:lightblue;
