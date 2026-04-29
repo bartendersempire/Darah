@@ -111,19 +111,19 @@ body {
     left: 50% !important;
     transform: translateX(-50%) !important;
         }
-
-    .senha{
-    left: 50% !important;
+    
+.senha{
+    left: 43% !important;
     transform: translateX(-50%) !important;
         width: 80% !important;
-        margin-top: 55% !important;
-        height: 40px;
+        margin-top: 5% !important;
+        height: 20px;
     }
 
     .entrar{
-    left: 50% ;
+    left: 3% ;
         width: 60% !important;
-        top: 13%;
+        top: 5%;
         height: 40px;
     }
 
