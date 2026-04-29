@@ -29,7 +29,6 @@ body {
 }
 .senha{
     font-size: 14px;
-    position: relative;
     font-family: 'Times New Roman', Times, serif;
     width: 70%; 
     height: 10%;
@@ -42,7 +41,7 @@ body {
 .validar{
     text-align: center;
     font-size: 18px;
-    position: fixed;
+    
     font-family: 'Times New Roman', Times, serif;
     width: 15%; 
     height: 4%;
@@ -54,7 +53,6 @@ body {
     height: 35px;
     text-align: center;
     font-size: 18px;
-    position: relative ;
     font-family: 'Times New Roman', Times, serif;
     border-radius: 3%;
     background-color: rgba(218, 243, 252, 0.838);
@@ -113,8 +111,6 @@ body {
     transform: translateX(-50%) !important;
         width: 80% !important;
         height: 20px;
-    left:-30%;
-    top:1%;
     }
 
     .entrar{
