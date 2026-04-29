@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+.titulo{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+    margin-top: 15%;
+    color: rgb(0, 204, 255);
+    text-shadow: -2px 2px 1px black, 2px -2px 1px black;
+}
+
+.box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-size: 20px;
+    width: 33%;
+    height: auto; /* 🔥 corrigido */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(192, 235, 255, 0.666);
+    padding: 20px; /* 🔥 melhora layout */
+    border-radius: 10px;
+}
+
+body {
+    background-image: url("/img/fundo.png"); /* 🔥 corrigido */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.senha{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 80%; 
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgba(218, 243, 252, 0.838);
+    text-align: center;
+}
+
+::placeholder{
+    text-align: center;
+}
+
+.entrar{
+    width: 60%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: rgba(218, 243, 252, 0.838);
+    cursor: pointer;
+}
+
+.validar{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 200px; 
+    height: 40px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.selecionado {
+    border: 6px solid red;
+    box-shadow: -2px 2px 1px red;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+}
+
+.captcha{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.bloco {
+    width: 100px;
+    height: 100px;
+    background-image: url("/img/18.jpg"); /* 🔥 corrigido */
+    background-size: 300px 300px;
+    cursor: pointer;
+    border: 2px solid #000000;
+}
+
+h3{
+    color: lightblue;
+    text-shadow: -2px 2px 1px black, 2px -2px 1px black;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+    body {
+        background-image: url("/img/Fundocel.png") !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .titulo{
+        margin-top: 20%;
+    }
+
+    .box{
+        width: 90%;
+        padding: 20px;
+    }
+
+    .senha{
+        width: 90%;
+    }
+
+    .entrar{
+        width: 70%;
+    }
+
+    .validar{
+        width: 70%;
+    }
+
+    #grid {
+        grid-template-columns: repeat(3, 80px);
+        margin-top: 20px;
+    }
+
+    .bloco {
+        width: 80px;
+        height: 80px;
+        background-size: 240px 240px;
+    }
+}
