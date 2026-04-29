@@ -1,150 +1,93 @@
 @charset "UTF-8";
 
-.titulo{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 26px;
-    margin-top: 15%;
-    color: rgb(0, 204, 255);
-    text-shadow: -2px 2px 1px black, 2px -2px 1px black;
+body {
+    margin: 0;
+    font-family: Arial;
+    background-image: url("../img/fundo.png");
+    background-size: cover;
 }
 
+/* TITULO */
+.titulo{
+    text-align: center;
+    margin-top: 15%;
+    color: rgb(0, 204, 255);
+}
+
+/* BOX LOGIN */
 .box{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     
-    font-size: 20px;
-    width: 33%;
-    
+    width: 30%;
+    padding: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    background-color: rgba(192, 235, 255, 0.666);
-    padding: 20px;
+    background-color: rgba(192, 235, 255, 0.7);
     border-radius: 10px;
-}
-
-body {
-    background-image: url("../img/fundo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
 }
 
 /* INPUT */
 .senha{
-    font-size: 14px;
-    font-family: 'Times New Roman', Times, serif;
-    width: 80%; 
+    width: 80%;
     height: 40px;
     margin-top: 20px;
-    border-radius: 5px;
-    background-color: rgba(218, 243, 252, 0.838);
     text-align: center;
 }
 
-::placeholder{
-    text-align: center;
-}
-
-/* BOTÃO ENTRAR */
-.entrar{
+/* BOTÃO */
+.entrar, .validar{
+    margin-top: 20px;
     width: 60%;
     height: 40px;
-    margin-top: 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    background-color: rgba(218, 243, 252, 0.838);
-    cursor: pointer;
-    border: none;
-}
-
-/* BOTÃO VALIDAR */
-.validar{
-    text-align: center;
-    font-size: 18px;
-    width: 200px; 
-    height: 40px;
-    margin: 20px auto;
-    display: block;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-/* SELEÇÃO DO BLOCO */
-.selecionado {
-    border: 4px solid red;
-    box-shadow: 0px 0px 10px red;
-}
-
-/* GRID CAPTCHA */
+/* CAPTCHA GRID */
 #grid {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     gap: 5px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-/* BLOCO CAPTCHA */
+/* PEÇAS */
 .bloco {
     width: 100px;
     height: 100px;
     background-image: url("../img/18.jpg");
     background-size: 300px 300px;
-    cursor: pointer;
     border: 2px solid black;
+    cursor: pointer;
 }
 
-/* TEXTO CAPTCHA */
-.captcha{
-    margin-top: 30px;
-    text-align: center;
+/* SELEÇÃO */
+.selecionado {
+    border: 4px solid red;
 }
 
-h3{
-    color: lightblue;
-    text-shadow: -2px 2px 1px black, 2px -2px 1px black;
-}
+/* MOBILE */
+@media (max-width: 768px){
 
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-
-    body {
+    body{
         background-image: url("../img/Fundocel.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .titulo{
-        margin-top: 20%;
     }
 
     .box{
         width: 80%;
-        padding: 20px;
-    }
-
-    .senha{
-        width: 90%;
-    }
-
-    .entrar{
-        width: 70%;
-    }
-
-    .validar{
-        width: 70%;
     }
 
     #grid {
         grid-template-columns: repeat(3, 80px);
     }
 
-    .bloco {
+    .bloco{
         width: 80px;
         height: 80px;
         background-size: 240px 240px;
