@@ -24,7 +24,10 @@ let ordem = [0,1,2,3,4,5,6,7,8];
 let selecionado = null;
 
 function embaralhar() {
-    ordem.sort(() => Math.random() - 0.5);
+    for (let i = ordem.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [ordem[i], ordem[j]] = [ordem[j], ordem[i]];
+    }
 }
 
 function renderizar() {
