@@ -63,9 +63,10 @@ body {
     left:-2%;
 }
 .selecionado {
-    outline: 3px solid red;
-    outline-offset: -3px;
+    border: -15px solid red;
+    box-shadow: -2px 2px 1px red;
 }
+
 
 .captcha{
     margin-top:15%;
