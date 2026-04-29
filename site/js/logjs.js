@@ -31,7 +31,7 @@ function renderizar() {
     let grid = document.getElementById("grid");
     grid.innerHTML = "";
 
-    // 👇 tamanho dinâmico
+    // 👇 tamanho fixo baseado na tela
     let tamanho = window.innerWidth <= 768 ? 80 : 100;
 
     ordem.forEach((pos, index) => {
@@ -47,9 +47,9 @@ function renderizar() {
 
         div.style.backgroundPosition = `-${x}px -${y}px`;
 
-        grid.appendChild(div);
-
         div.onclick = () => selecionar(index);
+
+        grid.appendChild(div);
     });
 }
 
