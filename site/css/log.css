@@ -104,6 +104,8 @@ body {
         margin-top: 10% !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
+        width: 95%;
+    height: 45%;
         }
     
 .senha{
