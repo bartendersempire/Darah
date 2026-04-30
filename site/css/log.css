@@ -9,17 +9,18 @@
 }
 .box{
     position: relative;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20px;
-    width: 33%;
+    width: 53%;
     height: 25%;    
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.box{ background-color: rgba(192, 235, 255, 0.666); }
+.box{ 
+    background-color: rgba(192, 235, 255, 0.666); }
 body {
     background-image: url("../img/fundo.png");
     background-size: cover;
@@ -110,9 +111,9 @@ body {
     
 .senha{
     transform: translateX(-50%) !important;
-        width: 95% !important;
+        width: 100% !important;
         height: 20px;
-    left:50%;
+    left:48%;
     }
 
     .entrar{
