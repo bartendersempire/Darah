@@ -111,8 +111,8 @@ body {
 .senha{
     top: 25%;
     transform: translateX(-50%) !important;
-        width: 100% !important;
-        height: 20px;
+        width: 95% !important;
+        height: 25px;
     left:50%;
     
     }
