@@ -105,7 +105,7 @@ body {
         margin-top: 10% !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-        width: 95%;
+        width: 105%;
     height: 95%;
         }
     
@@ -113,7 +113,7 @@ body {
     transform: translateX(-50%) !important;
         width: 100% !important;
         height: 20px;
-    left:49.5%;
+    left:50%;
     
     }
 
