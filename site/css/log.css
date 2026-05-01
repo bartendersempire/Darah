@@ -101,7 +101,7 @@ body {
     }
 
     .box{
-        left: auto !important;
+        left: 1% !important;
         top: 50%;
         margin-top: 47% !important;
         width: 100%;
